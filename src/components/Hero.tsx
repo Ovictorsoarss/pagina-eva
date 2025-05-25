@@ -50,18 +50,18 @@ const Hero = () => {
   };
 
   const carouselImages = [
-    "/assets/4vIndTy-Imgur.webp",
-    "/assets/6uZT148-Imgur.webp",
-    "/assets/7vUzKXb-Imgur.webp",
-    "/assets/9ah8xE4-Imgur.webp",
-    "/assets/grJ6TVa-Imgur.webp",
-    "/assets/HVFQjIX-Imgur.webp",
-    "/assets/NirmoK7-Imgur.webp",
-    "/assets/p0gZtif-Imgur.webp",
-    "/assets/vampiro.webp",
-    "/assets/Xm5MwVU-Imgur.webp",
-    "/assets/xS1tdPF-Imgur.webp",
-    "/assets/ZdVPQs6-Imgur.webp",
+  "/assets/4vIndTy.webp",
+  "/assets/6uZT148.webp",
+  "/assets/7VUzKXb.webp",
+  "/assets/9ah8xe4.webp",
+  "/assets/grJ6TVa.webp",
+  "/assets/HVfQjIX.webp",
+  "/assets/NirmoK7.webp",
+  "/assets/p0gZtiF.webp",
+  "/assets/vampiro.webp",
+  "/assets/Xm5MwVU.webp",
+  "/assets/xSltdPF.webp",
+  "/assets/ZdVPQs6.webp",
   ];
 
   return (
