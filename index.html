@@ -45,6 +45,36 @@
     </script>
     <!-- Fim UTMify -->
 
+    <!-- Captura de UTMs -->
+    <script>
+      (function() {
+        function getParameterByName(name) {
+          name = name.replace(/[\[\]]/g, '\\$&');
+          const url = window.location.href;
+          const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+          const results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        const utms = {
+          utm_source: getParameterByName('utm_source'),
+          utm_medium: getParameterByName('utm_medium'),
+          utm_campaign: getParameterByName('utm_campaign'),
+          utm_content: getParameterByName('utm_content'),
+          utm_term: getParameterByName('utm_term')
+        };
+
+        for (const key in utms) {
+          if (utms[key]) {
+            localStorage.setItem(key, utms[key]);
+          }
+        }
+      })();
+    </script>
+    <!-- Fim Captura de UTMs -->
+
     <title>500 Moldes de E.V.A Lucrativos | TUDOEMFELTRO.SHOP</title>
 
     <style>

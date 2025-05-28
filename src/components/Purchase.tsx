@@ -7,6 +7,17 @@ const Purchase = () => {
   const [showModal, setShowModal] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
 
+  // Função que pega as UTMs do localStorage
+  const getUTMs = () => {
+    const utm_source = localStorage.getItem('utm_source') || '';
+    const utm_medium = localStorage.getItem('utm_medium') || '';
+    const utm_campaign = localStorage.getItem('utm_campaign') || '';
+    const utm_content = localStorage.getItem('utm_content') || '';
+    const utm_term = localStorage.getItem('utm_term') || '';
+
+    return `?utm_source=${utm_source}&utm_medium=${utm_medium}&utm_campaign=${utm_campaign}&utm_content=${utm_content}&utm_term=${utm_term}`;
+  };
+
   useEffect(() => {
     window.history.pushState(null, '', window.location.href);
     const handlePopState = () => {
@@ -20,7 +31,7 @@ const Purchase = () => {
   }, []);
 
   const handlePlanoPremium = () => {
-    window.location.href = 'https://pay.kirvano.com/1d290f3b-2a59-4460-8756-df203c9e4f28';
+    window.location.href = 'https://pay.kirvano.com/1d290f3b-2a59-4460-8756-df203c9e4f28' + getUTMs();
   };
 
   const handlePlanoBasico = () => {
@@ -28,16 +39,16 @@ const Purchase = () => {
   };
 
   const handleUpgrade = () => {
-    window.location.href = 'https://pay.kirvano.com/25b8b60e-a831-4baa-812a-b6131eaedad8';
+    window.location.href = 'https://pay.kirvano.com/25b8b60e-a831-4baa-812a-b6131eaedad8' + getUTMs();
   };
 
   const handleContinuarBasico = () => {
     setShowModal(false);
-    window.location.href = 'https://pay.kirvano.com/045cf706-1856-4f34-a1fd-21d744c7c901';
+    window.location.href = 'https://pay.kirvano.com/045cf706-1856-4f34-a1fd-21d744c7c901' + getUTMs();
   };
 
   const handleDownsell = () => {
-    window.location.href = 'https://pay.kirvano.com/251277ba-935c-4588-b645-a6ff3291f605';
+    window.location.href = 'https://pay.kirvano.com/251277ba-935c-4588-b645-a6ff3291f605' + getUTMs();
   };
 
   const handleCloseExit = () => {
@@ -84,7 +95,6 @@ const Purchase = () => {
 
             {/* Plano Premium */}
             <div className="relative group">
-              {/* Glow no fundo */}
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-xl blur-lg opacity-70 group-hover:opacity-100 transition duration-500"></div>
 
               <div className="relative backdrop-blur-md border border-amber-500/30 rounded-xl p-8 hover:border-amber-500/50 transition-all duration-300">
