@@ -31,6 +31,11 @@ const FAQ = () => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const scrollToPurchase = () => {
+    const purchaseSection = document.querySelector('#purchase-section');
+    purchaseSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="py-24 bg-gradient-to-b from-indigo-900 to-violet-900">
       <div className="container mx-auto px-4">
@@ -67,16 +72,7 @@ const FAQ = () => {
           <div className="text-center">
             <div className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 p-[2px] rounded-full mb-8">
               <button 
-                onClick={() => {
-                  const premiumPlan = document.querySelector('#premium-plan');
-                  if (premiumPlan) {
-                    const offset = premiumPlan.getBoundingClientRect().top + window.scrollY - 100;
-                    window.scrollTo({
-                      top: offset,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
+                onClick={scrollToPurchase}
                 className="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-xl px-12 py-5 rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all duration-300"
               >
                 QUERO APROVEITAR ESSA OPORTUNIDADE

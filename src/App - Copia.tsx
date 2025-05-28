@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Purchase from './components/Purchase';
@@ -11,22 +11,22 @@ import './utils/animations.css';
 function App() {
   useEffect(() => {
     const reveals = document.querySelectorAll('.reveal');
-
+    
     const revealOnScroll = () => {
       reveals.forEach((reveal) => {
         const windowHeight = window.innerHeight;
         const revealTop = reveal.getBoundingClientRect().top;
         const revealPoint = 150;
-
+        
         if (revealTop < windowHeight - revealPoint) {
           reveal.classList.add('active');
         }
       });
     };
-
+    
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-
+    revealOnScroll(); // Check on initial load
+    
     return () => {
       window.removeEventListener('scroll', revealOnScroll);
     };
@@ -35,7 +35,6 @@ function App() {
   return (
     <div className="app">
       <Hero />
-
       <div className="reveal">
         <Testimonials />
       </div>
@@ -57,4 +56,3 @@ function App() {
 }
 
 export default App;
-

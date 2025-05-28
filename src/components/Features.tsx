@@ -51,9 +51,9 @@ const Features = () => {
     }
   ];
 
-  const scrollToBasicPlan = () => {
-    const basicPlan = document.querySelector('#basic-plan');
-    basicPlan?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToPurchase = () => {
+    const purchaseSection = document.querySelector('#purchase-section');
+    purchaseSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -114,7 +114,7 @@ const Features = () => {
 
         <div className="mt-16 text-center">
           <button 
-            onClick={scrollToBasicPlan}
+            onClick={scrollToPurchase}
             className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all duration-300"
           >
             QUERO APROVEITAR

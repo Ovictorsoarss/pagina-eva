@@ -48,38 +48,38 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Laysa Nunes",
-      image: "https://i.imgur.com/vFDHvnX.jpeg",
-      workImage: "https://i.imgur.com/dkOCepi.png",
+      image: "/assets/testimonials/laysa.webp",
+      workImage: "/assets/testimonials/LaysaD.webp",
       comment: "Fiz meu primeiro molde logo no primeiro dia de aula e o resultado ficou PROFISSIONAL! As professoras ficaram impressionadas e eu percebi na hora que escolhi o curso certo. Nunca imaginei aprender tão rápido algo tão complexo! 💥🔥"
     },
     {
-     name: "Ana Karina Artesã",
-      image: "https://i.imgur.com/Gv3VEW5.jpeg",
-      workImage: "https://i.imgur.com/ejE08sj.png",
+      name: "Ana Karina Artesã",
+      image: "/assets/testimonials/anakarina.webp",
+      workImage: "/assets/testimonials/AnaD.webp",
       comment: "Achei que seria complicado, mas o passo a passo é tão claro que, em um mês, consegui vender bastante e estou fazendo encomendas especiais. O curso realmente me deu o empurrão que eu precisava!"
     },
     {
       name: "Carolina Almeida",
-      image: "https://i.imgur.com/Bxk6Tsu.jpeg",
-      workImage: "https://i.imgur.com/bvrHvQM.png",
+      image: "/assets/testimonials/carol.webp",
+      workImage: "/assets/testimonials/CarolD.webp",
       comment: "Antes do curso, minhas peças pareciam rascunho de iniciante 😅 Agora cada criação minha sai com acabamento impecável e estilo profissional! O que era motivo de vergonha, hoje é motivo de orgulho."
     },
     {
       name: "Raquel Bossari",
-      image: "https://i.imgur.com/oUbeGIi.jpeg",
-      workImage: "https://i.imgur.com/AnDc5hl.jpeg",
+      image: "/assets/testimonials/raquel.webp",
+      workImage: "/assets/testimonials/RaquelD.webp",
       comment: "Achei que seria complicado, mas o passo a passo é tão claro que, em um mês, consegui vender bastante e estou fazendo encomendas especiais. O curso realmente me deu o empurrão que eu precisava!"
     },
     {
       name: "Andrea Flores",
-      image: "https://i.imgur.com/LrNHQb6.jpeg",
-      workImage: "https://i.imgur.com/sfScpkD.png",
+      image: "/assets/testimonials/andre.webp",
+      workImage: "/assets/testimonials/andrea.webp",
       comment: "A Maleta da Leitura virou meu xodó! 😍 Os moldes são tão incríveis que dá vontade de produzir o dia inteiro. Já tô até planejando montar kits e começar a vender porque essa belezura aqui chama atenção de longe!"
     },
     {
       name: "Ateliê Helena Vieira",
-      image: "https://i.imgur.com/SINMGnN.jpeg",
-      workImage: "https://i.imgur.com/fItT53M.png",
+      image: "/assets/testimonials/helena.webp",
+      workImage: "/assets/testimonials/helenad.webp",
       comment: "Eu quase desisti dos moldes em EVA… tudo saía torto, sem graça. Mas depois que entrei no curso, tudo mudou: minhas peças ficaram com acabamento profissional, as clientes começaram a elogiar e as vendas começaram a rolar. Foi o empurrão que eu precisava!"
     }
   ];
@@ -101,8 +101,12 @@ const Testimonials = () => {
     <div className="py-24 bg-gradient-to-b from-indigo-900 to-violet-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">DEPOIMENTOS DE ALUNAS EM 2025</h2>
-          <p className="text-lg text-indigo-200">Arrasta pro lado e veja como nossas alunas estão transformando talento em renda de verdade!</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            DEPOIMENTOS DE ALUNAS EM 2025
+          </h2>
+          <p className="text-lg text-indigo-200">
+            Arrasta pro lado e veja como nossas alunas estão transformando talento em renda de verdade!
+          </p>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-6"></div>
         </div>
 
@@ -111,35 +115,33 @@ const Testimonials = () => {
             <div ref={sliderRef} className="keen-slider">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="keen-slider__slide flex justify-center">
-                  <div className="w-full max-w-sm bg-white/5 backdrop-blur-sm p-4 pt-3 pb-3 rounded-xl border-2 border-yellow-400 shadow-sm transform hover:-translate-y-1 transition-all duration-300 h-auto">
+                  <div className="w-full max-w-sm bg-white/5 backdrop-blur-sm p-4 rounded-xl border-2 border-yellow-400 shadow-md transform hover:-translate-y-1 transition-all duration-300">
                     <div className="flex items-center gap-3 mb-3">
-                      {testimonial.image ? (
-                        <div className="w-12 h-12 rounded-full overflow-hidden">
-                          <img 
-                            src={testimonial.image} 
-                            alt={testimonial.name}
-                            className="w-full h-full object-cover object-center"
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
-                          {testimonial.name.charAt(0)}
-                        </div>
-                      )}
+                      <div className="w-12 h-12 rounded-full overflow-hidden">
+                        <img 
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          loading="lazy"
+                          width="48"
+                          height="48"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
                     </div>
 
                     <p className="text-base text-indigo-100 mb-4 leading-normal">{testimonial.comment}</p>
 
-                    {testimonial.workImage && (
-                      <div className="w-full aspect-square mb-4 overflow-hidden rounded-lg border-2 border-yellow-400">
-                        <img
-                          src={testimonial.workImage}
-                          alt={`Trabalho de ${testimonial.name}`}
-                          className="w-full h-full object-cover object-center rounded-lg"
-                        />
-                      </div>
-                    )}
+                    <div className="w-full aspect-square mb-4 overflow-hidden rounded-lg border-2 border-yellow-400">
+                      <img
+                        src={testimonial.workImage}
+                        alt={`Trabalho de ${testimonial.name}`}
+                        loading="lazy"
+                        width="400"
+                        height="400"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
                     <button 
                       onClick={() => handleLike(index)}
