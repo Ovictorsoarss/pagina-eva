@@ -7,7 +7,6 @@ const Purchase = () => {
   const [showModal, setShowModal] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
 
-  // Função para capturar UTMs do localStorage
   const getUTMs = () => {
     const utm_source = localStorage.getItem('utm_source') || '';
     const utm_medium = localStorage.getItem('utm_medium') || '';
@@ -18,14 +17,12 @@ const Purchase = () => {
   };
 
   useEffect(() => {
-    // Detecta botão de voltar
     window.history.pushState(null, '', window.location.href);
     const handlePopState = () => {
       setShowExitModal(true);
       window.history.pushState(null, '', window.location.href);
     };
 
-    // Detecta tentativa de fechar ou sair com o mouse no topo
     const handleMouseOut = (e: MouseEvent) => {
       if (e.clientY <= 0) {
         setShowExitModal(true);
@@ -50,7 +47,7 @@ const Purchase = () => {
   };
 
   const handleUpgrade = () => {
-    window.location.href = 'https://pay.kirvano.com/25b8b60e-a831-4baa-812a-b6131eaedad8' + getUTMs();
+    window.location.href = 'https://pay.kirvano.com/594e2891-3594-415d-a80b-aa9d7284a97a' + getUTMs();
   };
 
   const handleContinuarBasico = () => {
@@ -148,7 +145,6 @@ const Purchase = () => {
             </div>
           </div>
 
-          {/* Garantia */}
           <div className="max-w-3xl mx-auto">
             <div className="relative backdrop-blur-md border border-green-500/30 rounded-xl p-8 hover:border-green-500/50 transition-all duration-300">
               <div className="flex items-center gap-4 mb-4">
