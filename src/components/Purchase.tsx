@@ -7,26 +7,37 @@ const Purchase = () => {
   const [showModal, setShowModal] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
 
-  // Função que pega as UTMs do localStorage
+  // Função para capturar UTMs do localStorage
   const getUTMs = () => {
     const utm_source = localStorage.getItem('utm_source') || '';
     const utm_medium = localStorage.getItem('utm_medium') || '';
     const utm_campaign = localStorage.getItem('utm_campaign') || '';
     const utm_content = localStorage.getItem('utm_content') || '';
     const utm_term = localStorage.getItem('utm_term') || '';
-
     return `?utm_source=${utm_source}&utm_medium=${utm_medium}&utm_campaign=${utm_campaign}&utm_content=${utm_content}&utm_term=${utm_term}`;
   };
 
   useEffect(() => {
+    // Detecta botão de voltar
     window.history.pushState(null, '', window.location.href);
     const handlePopState = () => {
       setShowExitModal(true);
       window.history.pushState(null, '', window.location.href);
     };
+
+    // Detecta tentativa de fechar ou sair com o mouse no topo
+    const handleMouseOut = (e: MouseEvent) => {
+      if (e.clientY <= 0) {
+        setShowExitModal(true);
+      }
+    };
+
     window.addEventListener('popstate', handlePopState);
+    document.addEventListener('mouseout', handleMouseOut);
+
     return () => {
       window.removeEventListener('popstate', handlePopState);
+      document.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
 
