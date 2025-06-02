@@ -93,7 +93,7 @@ const Hero = () => {
           <div className="aspect-video relative rounded-lg overflow-hidden shadow-2xl">
             <img 
               loading="lazy"
-              src="https://tudoemfeltro.shop/wp-content/uploads/2024/12/BARBEARIA-LUCRATIVA-2-1024x576.png" 
+              src="/assets/imagem1.webp" 
               alt="Moldes de EVA Lucrativos" 
               className="w-full h-full object-contain"
             />
