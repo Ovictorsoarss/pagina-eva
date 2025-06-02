@@ -93,7 +93,7 @@ const Hero = () => {
           <div className="aspect-video relative rounded-lg overflow-hidden shadow-2xl">
             <img 
               loading="lazy"
-              src="/assets/imagem1.webp" 
+              src="/assets/imagem1_optimized.webp" 
               alt="Moldes de EVA Lucrativos" 
               className="w-full h-full object-contain"
             />
