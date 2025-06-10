@@ -52,7 +52,7 @@ const Purchase = () => {
 
   const handleContinuarBasico = () => {
     setShowModal(false);
-    window.location.href = 'https://pay.kirvano.com/045cf706-1856-4f34-a1fd-21d744c7c901' + getUTMs();
+    window.location.href = 'https://www.ggcheckout.com/checkout/v2/6XWHgNEoNVqpnu3LB0kH' + getUTMs();
   };
 
   const handleDownsell = () => {
@@ -88,7 +88,7 @@ const Purchase = () => {
                     <span className="text-white">Acesso 3 meses</span>
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-white mb-8">R$10,99</div>
+                <div className="text-3xl font-bold text-white mb-8">R$10,90</div>
                 <button
                   onClick={handlePlanoBasico}
                   className="block w-full text-center bg-gray-500 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300"
