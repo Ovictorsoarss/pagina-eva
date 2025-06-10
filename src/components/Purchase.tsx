@@ -39,7 +39,7 @@ const Purchase = () => {
   }, []);
 
   const handlePlanoPremium = () => {
-    window.location.href = 'https://pay.kirvano.com/1d290f3b-2a59-4460-8756-df203c9e4f28' + getUTMs();
+    window.location.href = 'https://www.ggcheckout.com/checkout/v2/LAEpj9VSZ9BU4Z6RjHcu' + getUTMs();
   };
 
   const handlePlanoBasico = () => {
