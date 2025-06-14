@@ -86,13 +86,13 @@ const Hero = () => {
         </div>
 
         <div className={`text-center mb-8 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2 text-center">
-            <span className="block">Abra as Portas para o Encanto:</span>
-            <span className="block text-xl md:text-2xl">
-              Entre na <span className="text-pink-400">Nação Encantada por Feltro</span> e
-        </span>
-            <span className="block text-[#faff00]">Viva a Magia de 2025!</span>
-          </h1>
+<h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2 text-center">
+  <span className="block">Abra as Portas para o Encanto:</span>
+  <span className="block">
+    Entre na <span className="text-pink-400">Nação Encantada por Feltro</span> e
+  </span>
+  <span className="block text-[#faff00]">Viva a Magia de 2025!</span>
+</h1>
           <p className="text-sm md:text-base lg:text-lg text-indigo-200 mt-2 max-w-2xl mx-auto">
             Mais que um curso ou comunidade, é um universo mágico onde criatividade e tendências se encontram, conectando apaixonados por feltro e transformando sua arte em algo extraordinário.
           </p>
