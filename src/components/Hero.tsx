@@ -89,8 +89,8 @@ const Hero = () => {
           <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2 text-center">
             <span className="block">Abra as Portas para o Encanto:</span>
             <span className="block text-xl md:text-2xl">
-              Entre na <span className="text-pink-400">Nação Encantada por Feltro e
-            </span>
+              Entre na <span className="text-pink-400">Nação Encantada por Feltro</span> e
+        </span>
             <span className="block text-[#faff00]">Viva a Magia de 2025!</span>
           </h1>
           <p className="text-sm md:text-base lg:text-lg text-indigo-200 mt-2 max-w-2xl mx-auto">
