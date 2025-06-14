@@ -112,17 +112,15 @@ const Hero = () => {
         </div>
 
         {/* Botão adicional logo abaixo do vídeo */}
-<div className="mt-6">
+<div className="mt-6 mb-4">
   <button
     onClick={scrollToPurchase}
-    className="group relative bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all"
+    className="group relative bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg px-8 py-3 rounded-md shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all"
   >
     Quero fazer parte da Nação Encantada por E.V.A
-    <span className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping opacity-75"></span>
+    <span className="absolute inset-0 rounded-md border-2 border-white/30 animate-ping opacity-75"></span>
   </button>
 </div>
-
-
         <p className="text-white text-xl mb-8 text-center">
           Veja o que você vai conseguir fazer com suas próprias mãos 👇🏻✨
         </p>
