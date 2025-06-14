@@ -18,6 +18,11 @@ const Hero = () => {
     };
     setCurrentDate(`Atualizado hoje • ${date.toLocaleDateString('pt-BR', options)}`);
     setIsVisible(true);
+
+    const script = document.createElement("script");
+    script.src = "https://scripts.converteai.net/19c48418-f175-4c45-9733-6603921b387b/players/684cf3a9b903d6f8d47ebffb/player.js";
+    script.async = true;
+    document.head.appendChild(script);
   }, []);
 
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -43,7 +48,7 @@ const Hero = () => {
       setLoaded(true);
     },
   });
-  
+
   const scrollToPurchase = () => {
     const purchaseSection = document.querySelector('#purchase-section');
     purchaseSection?.scrollIntoView({ behavior: 'smooth' });
@@ -89,21 +94,23 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className={`relative w-full max-w-4xl mx-auto mb-8 transition-all duration-1000 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} style={{ transitionDelay: '400ms' }}>
-          <div className="aspect-video relative rounded-lg overflow-hidden shadow-2xl">
-            <img 
-              loading="lazy"
-              src="/assets/imagem1_optimized.webp" 
-              alt="Moldes de EVA Lucrativos" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-          
-          <div className="absolute -right-4 top-0 md:top-10 transform rotate-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-3 shadow-lg">
-            <div className="flex items-center gap-1 text-white">
-              <span className="font-bold">4.380</span>
-              <span className="text-sm">ALUNAS</span>
-            </div>
+        <div id="vid_684cf3a9b903d6f8d47ebffb" style={{ position: 'relative', width: '100%', paddingTop: '177.77%' }}>
+          <img 
+            id="thumb_684cf3a9b903d6f8d47ebffb" 
+            src="https://images.converteai.net/19c48418-f175-4c45-9733-6603921b387b/players/684cf3a9b903d6f8d47ebffb/thumbnail.jpg" 
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+            alt="thumbnail"
+          />
+          <div 
+            id="backdrop_684cf3a9b903d6f8d47ebffb" 
+            style={{ backdropFilter: 'blur(5px)', WebkitBackdropFilter: 'blur(5px)', position: 'absolute', top: 0, height: '100%', width: '100%' }}
+          ></div>
+        </div>
+
+        <div className="absolute -right-4 top-0 md:top-10 transform rotate-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-3 shadow-lg">
+          <div className="flex items-center gap-1 text-white">
+            <span className="font-bold">4.380</span>
+            <span className="text-sm">ALUNAS</span>
           </div>
         </div>
 
@@ -126,7 +133,7 @@ const Hero = () => {
               </div>
             ))}
           </div>
-          
+
           {loaded && instanceRef.current && (
             <>
               <button
@@ -135,7 +142,7 @@ const Hero = () => {
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              
+
               <button
                 onClick={() => instanceRef.current?.next()}
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-purple-600/80 hover:bg-purple-600 p-2 rounded-full text-white transition-all backdrop-blur-sm"
