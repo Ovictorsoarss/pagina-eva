@@ -88,7 +88,7 @@ const Hero = () => {
         <div className={`text-center mb-8 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2 text-center">
   <span className="block">Abra as Portas para o Encanto:</span>
-  <span className="block text-xl md:text-2xl">
+  <span className="block text-xl md:text-2xl whitespace-nowrap md:whitespace-normal">
     Entre na <span className="text-pink-400">Nação Encantada por Feltro</span> e
   </span>
   <span className="block text-[#faff00]">Viva a Magia de 2025!</span>
