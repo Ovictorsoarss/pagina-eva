@@ -149,10 +149,10 @@ const Purchase = () => {
             <div className="relative backdrop-blur-md border border-green-500/30 rounded-xl p-8 hover:border-green-500/50 transition-all duration-300">
               <div className="flex items-center gap-4 mb-4">
                 <ShieldCheck className="w-12 h-12 text-green-400" />
-                <h3 className="text-2xl font-bold text-white">Garantia de 7 Dias</h3>
+                <h3 className="text-2xl font-bold text-white">Garantia de 30 Dias</h3>
               </div>
               <p className="text-green-100">
-                Se por qualquer motivo você não ficar satisfeita com o curso, basta solicitar o reembolso em até 7 dias e devolveremos 100% do seu dinheiro. Sem perguntas, sem burocracia!
+                Se por qualquer motivo você não ficar satisfeita com o curso, basta solicitar o reembolso em até 30 dias e devolveremos 100% do seu dinheiro. Sem perguntas, sem burocracia!
               </p>
             </div>
           </div>

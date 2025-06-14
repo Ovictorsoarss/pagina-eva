@@ -1,3 +1,4 @@
+// Hero.tsx
 import React, { useEffect, useState } from 'react';
 import { ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useKeenSlider } from 'keen-slider/react';
@@ -81,45 +82,49 @@ const Hero = () => {
         </div>
 
         <div className="mb-4">
-          <img src="/assets/Logonação.webp" alt="Logo Nação Encantada por EVA" className="h-12 md:h-16 object-contain" />
+          <img src="/assets/Logonação.webp" alt="Logo Nção Encantada por EVA" className="max-w-[180px] w-full h-auto mx-auto" />
         </div>
 
         <div className={`text-center mb-8 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2">
-            <span className="text-white">Descubra </span>
-            <span className="text-yellow-400">500 Moldes de E.V.A</span>
-            <span className="text-white"> que estão transformando </span>
-            <span className="text-pink-400">artesãs</span>
-            <span className="text-white"> em </span>
-            <span className="text-green-400">Empreendedoras de sucesso!</span>
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2 text-center">
+            <span className="block">Abra as Portas para o Encanto:</span>
+            <span className="block text-xl md:text-2xl">
+              Entre na <span className="text-pink-400">Nção Encantada por Feltro</span> e
+            </span>
+            <span className="block text-[#faff00]">Viva a Magia de 2025!</span>
           </h1>
           <p className="text-sm md:text-base lg:text-lg text-indigo-200 mt-2 max-w-2xl mx-auto">
-            Transforme R$10 em R$2.700 por semana com os Moldes de E.V.A que Vendem no Automático!
+            Mais que um curso ou comunidade, é um universo mágico onde criatividade e tendências se encontram, conectando apaixonados por feltro e transformando sua arte em algo extraordinário.
           </p>
         </div>
 
         <div id="vid_684cf3a9b903d6f8d47ebffb" style={{ position: 'relative', width: '100%', paddingTop: '177.77%' }}>
-          <img 
-            id="thumb_684cf3a9b903d6f8d47ebffb" 
-            src="https://images.converteai.net/19c48418-f175-4c45-9733-6603921b387b/players/684cf3a9b903d6f8d47ebffb/thumbnail.jpg" 
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+          <img
+            id="thumb_684cf3a9b903d6f8d47ebffb"
+            src="https://images.converteai.net/19c48418-f175-4c45-9733-6603921b387b/players/684cf3a9b903d6f8d47ebffb/thumbnail.jpg"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             alt="thumbnail"
           />
-          <div 
-            id="backdrop_684cf3a9b903d6f8d47ebffb" 
+          <div
+            id="backdrop_684cf3a9b903d6f8d47ebffb"
             style={{ backdropFilter: 'blur(5px)', WebkitBackdropFilter: 'blur(5px)', position: 'absolute', top: 0, height: '100%', width: '100%' }}
           ></div>
         </div>
 
-        <div className="absolute -right-4 top-0 md:top-10 transform rotate-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-3 shadow-lg">
-          <div className="flex items-center gap-1 text-white">
-            <span className="font-bold">4.380</span>
-            <span className="text-sm">ALUNAS</span>
-          </div>
-        </div>
+        {/* Botão adicional logo abaixo do vídeo */}
+<div className="mt-6">
+  <button
+    onClick={scrollToPurchase}
+    className="group relative bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all"
+  >
+    Quero fazer parte da Nação Encantada por E.V.A
+    <span className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping opacity-75"></span>
+  </button>
+</div>
+
 
         <p className="text-white text-xl mb-8 text-center">
-          Veja o que você vai conseguir fazer com suas próprias mãos ✨
+          Veja o que você vai conseguir fazer com suas próprias mãos 👇🏻✨
         </p>
 
         <div className="relative w-full max-w-5xl">
@@ -127,9 +132,9 @@ const Hero = () => {
             {carouselImages.map((image, idx) => (
               <div key={idx} className="keen-slider__slide">
                 <div className="aspect-square relative rounded-lg overflow-hidden shadow-xl border border-white/20">
-                  <img 
+                  <img
                     loading="lazy"
-                    src={image} 
+                    src={image}
                     alt={`Exemplo de molde ${idx + 1}`}
                     className="w-full h-full object-contain mix-blend-multiply bg-white"
                   />
@@ -171,7 +176,7 @@ const Hero = () => {
         </div>
 
         <div className={`mb-16 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '800ms' }}>
-          <button 
+          <button
             onClick={scrollToPurchase}
             className="group relative bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg md:text-xl px-10 py-4 rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all"
           >

@@ -6,24 +6,24 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "📩 Quando recebo o acesso?",
-      answer: "Imediatamente após o pagamento, você recebe um e-mail com seu acesso à plataforma do curso."
+      question: "📩 Após concluir o pagamento, onde receberei as informações para acessar a Comunidade?",
+      answer: "Após a confirmação do pagamento, você receberá através do e-mail cadastrado todas as informações sobre o acesso a Comunidade. Caso não encontre o e-mail com as orientações, procure na sua caixa de spam ou lixo eletrônico. Se mesmo assim não encontrar, entre em contato com o suporte através do WhatsApp +55 33 998608924"
     },
     {
-      question: "👩‍🎨 Preciso ter experiência?",
-      answer: "Não! O curso é do básico ao avançado, pensado especialmente para quem está começando."
+      question: "👩‍🎨 Quando terei acesso aos conteúdos da Comunidade?",
+      answer: "A partir da confirmação do seu pagamento você receberá automaticamente o link de acesso para a Comunidade no e-mail cadastrado no ato da compra."
     },
     {
-      question: "⏱️ O acesso é vitalício?",
-      answer: "Sim! Você pode assistir quando e quantas vezes quiser, sem limite de tempo."
+      question: "💳 Quais são as formas de pagamento disponíveis?",
+      answer: "O pagamento poderá ser feito através do PIX. Caso deseja efetuar o pagamento no cartão, entre em contato no WhatsApp +55 33 998608924"
     },
     {
-      question: "📱 Por onde vou acessar as aulas?",
-      answer: "Você acessa tudo em um portal exclusivo, com login e senha pessoal. Seguro, rápido e fácil de usar."
+      question: "📱 Haverá grupo de alunos?",
+      answer: "Sim, nós temos um grupo exclusivo para alunos no WhatsApp. O link está disponível na plataforma da Comunidade.."
     },
     {
-      question: "🎓 As aulas são fáceis de entender?",
-      answer: "Sim! As vídeo aulas são didáticas, objetivas e pensadas para iniciantes. Qualquer pessoa consegue acompanhar."
+      question: "🎓 O que irei encontrar na Comunidade?",
+      answer: "Moldes, videoaulas, encontros ao vivo, grupo exclusivo no WhatsApp e muito mais."
     }
   ];
 
