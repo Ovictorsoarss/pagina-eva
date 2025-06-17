@@ -43,6 +43,11 @@ const Testimonials = () => {
     if (savedLikedCards) {
       setLikedCards(JSON.parse(savedLikedCards));
     }
+
+    const script = document.createElement("script");
+    script.src = "https://scripts.converteai.net/19c48418-f175-4c45-9733-6603921b387b/players/6850d4a60fcaba279c73f696/player.js";
+    script.async = true;
+    document.head.appendChild(script);
   }, []);
 
   const testimonials = [
@@ -108,6 +113,14 @@ const Testimonials = () => {
             Arrasta pro lado e veja como nossas alunas estão transformando talento em renda de verdade!
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-6"></div>
+
+          {/* Video VTurb */}
+          <div className="mb-8 mt-10">
+            <div id="vid_6850d4a60fcaba279c73f696" style={{ position: 'relative', width: '100%', padding: '177.77% 0 0' }}>
+              <img id="thumb_6850d4a60fcaba279c73f696" src="https://images.converteai.net/19c48418-f175-4c45-9733-6603921b387b/players/6850d4a60fcaba279c73f696/thumbnail.jpg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} alt="thumbnail" />
+              <div id="backdrop_6850d4a60fcaba279c73f696" style={{ WebkitBackdropFilter: 'blur(5px)', backdropFilter: 'blur(5px)', position: 'absolute', top: 0, height: '100%', width: '100%' }}></div>
+            </div>
+          </div>
         </div>
 
         <div className="relative max-w-5xl mx-auto mb-12">
