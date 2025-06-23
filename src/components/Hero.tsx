@@ -9,6 +9,7 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [currentDate, setCurrentDate] = useState('');
+  const [showTimer, setShowTimer] = useState(true);
 
   useEffect(() => {
     const date = new Date();
@@ -38,6 +39,7 @@ const Hero = () => {
       }
       if (totalSeconds <= 0) {
         clearInterval(timerInterval);
+        setShowTimer(false);
       }
     }, 1000);
     return () => clearInterval(timerInterval);
@@ -89,11 +91,12 @@ const Hero = () => {
 
   return (
     <>
-      {/* Top banner fixo com timer */}
-      <div className="fixed top-0 left-0 w-full z-50 bg-red-600 text-white text-center text-sm md:text-base font-semibold py-2 flex items-center justify-center gap-2 shadow-md">
-        <span>Aproveite a oferta agora:</span>
-        <span id="timer" className="bg-white text-red-700 px-2 py-1 rounded font-bold text-sm">15:00</span>
-      </div>
+      {showTimer && (
+        <div className="fixed top-0 left-0 w-full z-50 bg-red-600 text-white text-center text-sm md:text-base font-semibold py-2 flex items-center justify-center gap-2 shadow-md">
+          <span>Aproveite a oferta agora:</span>
+          <span id="timer" className="bg-white text-red-700 px-2 py-1 rounded font-bold text-sm">15:00</span>
+        </div>
+      )}
 
       <div className="relative min-h-screen pt-[50px] bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 overflow-hidden">
         <div className="relative z-10 container mx-auto px-4 py-4 md:py-8 flex flex-col items-center">
