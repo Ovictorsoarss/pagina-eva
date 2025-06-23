@@ -1,8 +1,38 @@
-// Hero.tsx
 import React, { useEffect, useState } from 'react';
 import { ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useKeenSlider } from 'keen-slider/react';
 import "keen-slider/keen-slider.min.css";
+
+const TopBarTimer = () => {
+  const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutos
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (seconds: number) => {
+    const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const s = (seconds % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+  };
+
+  if (timeLeft === 0) return null;
+
+  return (
+    <div className="w-full bg-red-600 text-white py-2 text-center font-bold text-sm md:text-base z-50 fixed top-0 left-0 shadow-lg">
+      Aproveite a oferta agora: <span className="bg-black/20 px-2 py-1 rounded ml-1">{formatTime(timeLeft)}</span>
+    </div>
+  );
+};
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,6 +102,8 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 overflow-hidden">
+      <TopBarTimer />
+
       <div className="relative z-10 container mx-auto px-4 py-4 md:py-8 flex flex-col items-center">
 
         <div className="mb-2">
@@ -82,18 +114,17 @@ const Hero = () => {
         </div>
 
         <div className="mb-4">
-          <img src="/assets/Logonação.webp" alt="Logo Nção Encantada por EVA" className="max-w-[180px] w-full h-auto mx-auto" />
+          <img src="/assets/Logonação.webp" alt="Logo Nação Encantada por EVA" className="max-w-[180px] w-full h-auto mx-auto" />
         </div>
 
         <div className={`text-center mb-8 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-<h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2 text-center">
-  <span className="block">Abra as Portas para o Encanto:</span>
-  <span className="block text-xl md:text-2xl whitespace-nowrap md:whitespace-normal">
-    Entre na <span className="text-pink-400">Nação Encantada por E.V.A</span> e
-  </span>
-  <span className="block text-[#faff00]">Viva a Magia de 2025!</span>
-</h1>
-
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-snug px-2 text-center">
+            <span className="block">Abra as Portas para o Encanto:</span>
+            <span className="block text-xl md:text-2xl whitespace-nowrap md:whitespace-normal">
+              Entre na <span className="text-pink-400">Nação Encantada por E.V.A</span> e
+            </span>
+            <span className="block text-[#faff00]">Viva a Magia de 2025!</span>
+          </h1>
           <p className="text-sm md:text-base lg:text-lg text-indigo-200 mt-2 max-w-2xl mx-auto">
             Mais que um curso ou comunidade, é um universo mágico onde criatividade e tendências se encontram, conectando apaixonados por E.V.A e transformando sua arte em algo extraordinário.
           </p>
@@ -112,16 +143,16 @@ const Hero = () => {
           ></div>
         </div>
 
-        {/* Botão adicional logo abaixo do vídeo */}
-<div className="mt-6 mb-4">
-  <button
-    onClick={scrollToPurchase}
-    className="group relative bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg px-8 py-3 rounded-md shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all"
-  >
-    Quero fazer parte da Nação Encantada por E.V.A
-    <span className="absolute inset-0 rounded-md border-2 border-white/30 animate-ping opacity-75"></span>
-  </button>
-</div>
+        <div className="mt-6 mb-4">
+          <button
+            onClick={scrollToPurchase}
+            className="group relative bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg px-8 py-3 rounded-md shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all"
+          >
+            Quero fazer parte da Nação Encantada por E.V.A
+            <span className="absolute inset-0 rounded-md border-2 border-white/30 animate-ping opacity-75"></span>
+          </button>
+        </div>
+
         <p className="text-white text-xl mb-8 text-center">
           Veja o que você vai conseguir fazer com suas próprias mãos 👇🏻✨
         </p>
