@@ -8,17 +8,9 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  const [currentDate, setCurrentDate] = useState('');
-  const [showTimer, setShowTimer] = useState(true);
+  const [showTimer, setShowTimer] = useState(true); // banner do cronômetro
 
   useEffect(() => {
-    const date = new Date();
-    const options: Intl.DateTimeFormatOptions = {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    };
-    setCurrentDate(`Atualizado hoje • ${date.toLocaleDateString('pt-BR', options)}`);
     setIsVisible(true);
 
     const script = document.createElement("script");
@@ -100,13 +92,6 @@ const Hero = () => {
 
       <div className="relative min-h-screen pt-[50px] bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 overflow-hidden">
         <div className="relative z-10 container mx-auto px-4 py-4 md:py-8 flex flex-col items-center">
-          <div className="mb-2">
-            <div className="inline-flex items-center gap-2 bg-purple-700/90 px-3 py-1 rounded-full shadow-md border border-purple-400">
-              <span role="img" aria-label="calendar">📅</span>
-              <span className="text-xs font-semibold text-white">{currentDate}</span>
-            </div>
-          </div>
-
           <div className="mb-4">
             <img src="/assets/Logonação.webp" alt="Logo Nção Encantada por EVA" className="max-w-[180px] w-full h-auto mx-auto" />
           </div>
