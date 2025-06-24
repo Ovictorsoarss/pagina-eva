@@ -51,15 +51,12 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            O QUE ESTÃO FALANDO SOBRE A NAÇÃO
+            Histórias de Transformação e Encanto
           </h2>
-          <p className="text-lg text-indigo-200">
-            Arraste para o lado ou aguarde para ver os elogios reais de alunas encantadas!
-          </p>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-6"></div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto mb-12">
+        <div className="relative max-w-5xl mx-auto mb-8">
           <div ref={sliderRef} className="keen-slider">
             {images.map((src, index) => (
               <div key={index} className="keen-slider__slide flex justify-center">
@@ -79,20 +76,37 @@ const Testimonials = () => {
             <>
               <button
                 onClick={() => instanceRef.current?.prev()}
-                className="absolute -left-2 top-1/2 -translate-y-1/2 bg-purple-600/80 hover:bg-purple-600 p-2 rounded-full text-white transition-all backdrop-blur-sm z-10"
+                className="absolute -left-3 top-1/2 -translate-y-1/2 bg-purple-600/80 hover:bg-purple-600 p-1.5 rounded-full text-white transition-all backdrop-blur-sm z-10"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-4 h-4" />
               </button>
 
               <button
                 onClick={() => instanceRef.current?.next()}
-                className="absolute -right-2 top-1/2 -translate-y-1/2 bg-purple-600/80 hover:bg-purple-600 p-2 rounded-full text-white transition-all backdrop-blur-sm z-10"
+                className="absolute -right-3 top-1/2 -translate-y-1/2 bg-purple-600/80 hover:bg-purple-600 p-1.5 rounded-full text-white transition-all backdrop-blur-sm z-10"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-4 h-4" />
               </button>
             </>
           )}
         </div>
+
+        {/* Dots de navegação */}
+        {loaded && instanceRef.current && (
+          <div className="flex justify-center gap-2 mt-4">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => instanceRef.current?.moveToIdx(idx)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  currentSlide === idx
+                    ? "bg-orange-400 scale-110"
+                    : "bg-black"
+                }`}
+              ></button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
