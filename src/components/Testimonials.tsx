@@ -39,11 +39,11 @@ const Testimonials = () => {
   }, [instanceRef]);
 
   const images = [
-    "/assets/provasocial/pv1.webp",
-    "/assets/provasocial/pv2.webp",
-    "/assets/provasocial/pv3.webp",
-    "/assets/provasocial/pv4XX.webp",
-    "/assets/provasocial/pv5.webp",
+    "/assets/pv1.webp",
+    "/assets/pv2.webp",
+    "/assets/pv3.webp",
+    "/assets/pv4XX.webp",
+    "/assets/pv5.webp",
   ];
 
   return (
