@@ -179,7 +179,7 @@ const Hero = () => {
               </div>
               <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg px-8 py-4 shadow-lg shadow-green-600/30 hover:scale-105 transition-all">
                 <p className="text-white font-bold text-xl">
-                  POR APENAS <span className="text-2xl md:text-3xl">R$10</span>
+                  POR APENAS <span className="text-2xl md:text-3xl">R$10,90</span>
                 </p>
               </div>
             </div>
@@ -190,7 +190,7 @@ const Hero = () => {
               onClick={scrollToPurchase}
               className="group relative bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg md:text-xl px-10 py-4 rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-105 transition-all"
             >
-              QUERO APROVEITAR
+              SIM, QUERO FAZER PARTE
               <span className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping opacity-75"></span>
             </button>
           </div>
