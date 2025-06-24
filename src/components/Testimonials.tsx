@@ -42,7 +42,6 @@ const Testimonials = () => {
     "/assets/pv1.webp",
     "/assets/pv2.webp",
     "/assets/pv3.webp",
-    "/assets/pv4XX.webp",
     "/assets/pv5.webp",
   ];
 
